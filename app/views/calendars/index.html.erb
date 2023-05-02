@@ -16,7 +16,7 @@
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
-          <% day[:plans].each do |plan| %>
+          <% Date::DAYNAMES.each do |day| %>
             <li class='plan-list'>・<%= plan %></li>
           <% end %>
         <% end %>
