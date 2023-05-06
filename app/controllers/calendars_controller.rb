@@ -23,7 +23,7 @@ class CalendarsController < ApplicationController
 
     # Dateオブジェクトは、日付を保持しています。下記のように`.today.day`とすると、今日の日付を取得できます。
     @todays_date = Date.today
-    # 例)　今日が2月1日の場合・・・ Date.today.day => 1日
+    # 例) 今日が2月1日の場合・・・ Date.today.day => 1日
 
     @week_days = []
 
@@ -39,9 +39,14 @@ class CalendarsController < ApplicationController
       if wday_num >= 7
         wday_num = wday_num -7
       end
+<<<<<<< HEAD
       days = {month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[wday_num] }
+=======
+      
+      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num] }
+
+>>>>>>> c816999c55c743e16665f6b3716f86a71bbfa6dd
       @week_days.push(days)
     end
-
   end
 end
